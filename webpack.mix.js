@@ -17,3 +17,5 @@ mix.js('src/app.js', 'dist/')
 mix.sass('src/neuroshima.scss', 'dist/');
 
 mix.setPublicPath('dist');
+
+mix.browserSync('http://localhost/neuroshima-js');
