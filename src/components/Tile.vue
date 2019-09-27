@@ -32,43 +32,35 @@ export default {
             return this.$root.tileSize;
         },
 
-        _centerX: function() {
-            return parseFloat(this.x + this.size);
-        },
-
-        _centerY: function() {
-            return parseFloat(this.y + this.height);
-        },
-
         _points: function() {
             return [
                 {
-                    x: this._centerX - (this.size / 2),
-                    y: this._centerY - (this.height / 2),
+                    x: this.x - (this.size / 2),
+                    y: this.y - (this.height / 2),
                 },
                 {
-                    x: this._centerX + (this.size / 2),
-                    y: this._centerY - (this.height / 2),
+                    x: this.x + (this.size / 2),
+                    y: this.y - (this.height / 2),
                 },
                 {
-                    x: this._centerX + this.size,
-                    y: this._centerY,
+                    x: this.x + this.size,
+                    y: this.y,
                 },
                 {
-                    x: this._centerX + (this.size / 2),
-                    y: this._centerY + (this.height / 2), 
+                    x: this.x + (this.size / 2),
+                    y: this.y + (this.height / 2), 
                 },
                 {
-                    x: this._centerX - (this.size / 2),
-                    y: this._centerY + (this.height / 2), 
+                    x: this.x - (this.size / 2),
+                    y: this.y + (this.height / 2), 
                 },
                 {
-                    x: this._centerX - this.size,
-                    y: this._centerY,
+                    x: this.x - this.size,
+                    y: this.y,
                 },
                 {
-                    x: this._centerX - (this.size / 2),
-                    y: this._centerY - (this.height / 2),
+                    x: this.x - (this.size / 2),
+                    y: this.y - (this.height / 2),
                 },
             ];
         },

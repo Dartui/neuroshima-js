@@ -1,9 +1,11 @@
 import TheBoard from './components/TheBoard.vue';
+import PlayerTray from './components/PlayerTray.vue';
 
 const neuroshima = new Vue({
     el: '#neuroshima',
     components: {
         TheBoard,
+        PlayerTray,
     },
     data: {
         documentWidth: 0,
@@ -15,7 +17,7 @@ const neuroshima = new Vue({
             const maxSizeFromWidth = this.documentWidth / (3 * this.boardSize - 1)
             const maxSizeFromHeight = this.documentHeight / ((2 * this.boardSize) - 1) / Math.sqrt(3);
 
-            return Math.min(maxSizeFromWidth, maxSizeFromHeight) * 0.90;
+            return Math.min(maxSizeFromWidth, maxSizeFromHeight) * 0.80;
         },
 
         tileWidth: function () {
@@ -39,7 +41,7 @@ const neuroshima = new Vue({
         },
 
         boardCenterY: function () {
-            return this.documentHeight / 2 - this.boardHeight / 2;
+            return this.documentHeight / 2 - this.boardHeight / 4;
         }
     },
     mounted: function () {

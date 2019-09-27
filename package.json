@@ -19,7 +19,7 @@
     "homepage": "https://github.com/Dartui/neuroshima-js#readme",
     "devDependencies": {
         "browser-sync": "^2.26.7",
-        "browser-sync-webpack-plugin": "^2.0.1",
+        "browser-sync-webpack-plugin": "^2.2.2",
         "cross-env": "^6.0.0",
         "laravel-mix": "^5.0.0",
         "lodash": "^4.17.15",
@@ -27,6 +27,7 @@
         "sass": "^1.22.12",
         "sass-loader": "^8.0.0",
         "vue": "^2.6.10",
+        "vue-clickaway": "^2.2.2",
         "vue-template-compiler": "^2.6.10"
     }
 }

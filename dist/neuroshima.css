@@ -9,3 +9,27 @@ body {
   height: 100vh;
 }
 
+.tray {
+  background-color: #fff;
+  border-top: 5px solid #000;
+  border-right: 5px solid #000;
+  border-left: 5px solid #000;
+  position: fixed;
+  width: 80vh;
+  bottom: 0;
+  transform: translateX(50%);
+  right: 50%;
+  padding: 20px;
+  transition: right 0.25s ease, transform 0.25s ease;
+}
+
+.tray.faded {
+  right: 5%;
+  transform: translateX(0) translateY(25%) scale(0.5);
+}
+
+.tray svg {
+  width: 100%;
+  height: 100%;
+}
+

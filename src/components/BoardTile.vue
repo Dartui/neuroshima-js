@@ -22,6 +22,10 @@ export default {
     },
 
     computed: {
+        size: function() {
+            return this.$root.tileSize;
+        },
+
         height: function() {
             return this.$root.tileHeight;
         },
@@ -39,17 +43,21 @@ export default {
         },
 
         x: function() {
-            const baseX = this.$root.boardCenterX;
-            const tileX = this.r * this.width - this.r * (this.width / 4);
+            const centerX = this.$root.documentWidth / 2;
+            const centerOffset = (this.boardSize - 1) * 1.5 * this.size;
+            const tileX = this.r * this.width * 0.75;
 
-            return baseX + tileX;
+            return centerX - centerOffset + tileX;
         },
 
         y: function() {
-            const baseY = this.$root.boardCenterY + this.verticalOffset;
+            const centerY = this.$root.documentHeight / 2;
+            const centerOffset = (this.boardSize - 1) * this.height / 2;
+            // const baseY = this.$root.boardCenterY + this.verticalOffset;
+            // const baseY = 0;
             const tileY = this.q * this.height - this.r * (this.height / 2);
 
-            return baseY + tileY;
+            return centerY - centerOffset + tileY;
         },
 
         shouldShow: function() {
